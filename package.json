@@ -27,7 +27,7 @@
   "dependencies": {
     "mkdirp": "~0.3.5",
     "async": "~0.2.9",
-    "mout": "~0.7.1",
+    "mout": "~0.8.0",
     "resolve": "~0.5.1",
     "find-modules": "~0.1.0"
   },
