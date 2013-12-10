@@ -3,7 +3,7 @@
 [![NPM](https://nodei.co/npm/npm-assets.png?compact=true)](https://nodei.co/npm/npm-assets/)
 
 [![Build Status](https://drone.io/github.com/conradz/npm-assets/status.png)](https://drone.io/github.com/conradz/npm-assets/latest)
-[![Dependency Status](https://gemnasium.com/conradz/npm-assets.png)](https://gemnasium.com/conradz/npm-assets)
+[![Dependency Status](https://david-dm.org/conradz/npm-assets.png)](https://david-dm.org/conradz/npm-assets)
 
 Use static files from NPM packages.
 
