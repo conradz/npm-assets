@@ -1,10 +1,10 @@
 {
   "name": "npm-assets",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Bundle static files with NPM packages",
   "main": "index.js",
   "bin": {
-      "npm-assets": "bin/npm-assets"
+    "npm-assets": "bin/npm-assets"
   },
   "scripts": {
     "test": "tap test.js"
