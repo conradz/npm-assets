@@ -1,2 +1,16 @@
 /node_modules
 /assets
+logs
+*.log
+npm-debug.log*
+pids
+*.pid
+*.seed
+lib-cov
+coverage
+.grunt
+.lock-wscript
+build/Release
+node_modules
+.npm
+.node_repl_history
