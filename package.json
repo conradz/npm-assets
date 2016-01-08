@@ -43,6 +43,7 @@
     "rimraf": "^2.5.0",
     "semantic-release": "^4.3.5",
     "tap": "^5.0.0",
+    "travis-after-all": "^1.4.4",
     "validate-commit-msg": "^1.0.0"
   }
 }

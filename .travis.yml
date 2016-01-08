@@ -1,0 +1,15 @@
+sudo: false
+language: node_js
+cache:
+  directories:
+    - node_modules
+node_js:
+  - '0.12'
+  - v4
+  - stable
+after_success:
+  - 'travis-after-all && npm run semantic-release'
+env:
+  global:
+    - secure: bTYJQSy2HcFC1U/frVdupc/vDhboxxVaFCJ17gBDOc8Qxv+grOH5kCyUAus+4vHubv8uLDN/HbYVpuRYHpGtjjEYDs6qD9Y2PKaK9UKsaHU3BVvqundJa+oClOXo+Zm0n3CvogmLnKu/WJMolvGRJdnjpPTcjW6t3uYW3DncXKs=
+    - secure: ZoGal/jSZtmSAiC/mJ5Rutv078q9EAVMm1hDfCTch4+tSI+rPkvv9mLgdr/lL87f8IuS5MXIuwvk43Fx4M7vninFknIw8/WIUa4xyIfnQWWKg1lElNt5LHejU3Z5woSoaHZniCtDYnjjv3Jo5T2gdH3cj5QM3ymmcE5e/0WZPds=
