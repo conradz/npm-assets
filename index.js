@@ -20,6 +20,13 @@ function copyAssets(root, dest, callback) {
         assets.forEach(function(asset) {
             asset.dest = path.join(dest, asset.name);
         });
+        assets = assets.filter(function(asset, i, total) {
+          for (var n = 0; n < total.length; n+=1) {
+            if(total[n].dest === asset.dest) {
+              return n === i;
+            }
+          }
+        });
         createDirs(assets, created);
     }
 
