@@ -13,6 +13,9 @@
   },
   "license": "BSD",
   "author": "Conrad Zimmerman <me@conradz.com>",
+  "contributors": [
+    "Keith Cirkel (http://keithcirkel.co.uk)"
+  ],
   "main": "index.js",
   "bin": {
     "npm-assets": "bin/npm-assets"
