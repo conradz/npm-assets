@@ -1,37 +1,49 @@
 {
   "name": "npm-assets",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "description": "Bundle static files with NPM packages",
+  "keywords": [
+    "assets",
+    "bundle",
+    "files",
+    "web"
+  ],
+  "bugs": {
+    "url": "https://github.com/conradz/npm-assets/issues"
+  },
+  "license": "BSD",
+  "author": "Conrad Zimmerman <me@conradz.com>",
+  "contributors": [
+    "Keith Cirkel (http://keithcirkel.co.uk)"
+  ],
   "main": "index.js",
   "bin": {
     "npm-assets": "bin/npm-assets"
   },
-  "scripts": {
-    "test": "tap test.js"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/conradz/npm-assets.git"
+    "url": "git+ssh://github.com/conradz/npm-assets.git"
   },
-  "keywords": [
-    "assets",
-    "web",
-    "files",
-    "bundle"
-  ],
-  "author": "Conrad Zimmerman <me@conradz.com>",
-  "license": "BSD",
-  "bugs": {
-    "url": "https://github.com/conradz/npm-assets/issues"
+  "scripts": {
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "tap test.js"
+  },
+  "config": {
+    "ghooks": {
+      "commit-msg": "validate-commit-msg"
+    }
   },
   "dependencies": {
-    "mkdirp": "~0.3.5",
-    "async": "~0.2.9",
-    "mout": "~0.8.0",
-    "find-modules": "~0.2.0"
+    "async": "^1.5.1",
+    "find-modules": "~0.2.0",
+    "mkdirp": "^0.5.1"
   },
   "devDependencies": {
-    "tap": "~0.4.4",
-    "rimraf": "~2.2.2"
+    "ghooks": "^1.0.1",
+    "rimraf": "^2.5.0",
+    "semantic-release": "^4.3.5",
+    "tap": "^5.0.0",
+    "travis-after-all": "^1.4.4",
+    "validate-commit-msg": "^1.0.0"
   }
 }

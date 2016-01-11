@@ -1,23 +1,14 @@
 #!/usr/bin/env node
-
-var assets = require('../');
-
 if (process.argv.length !== 3) {
-    console.error('Usage: npm-assets <dest>');
-    process.exit(1);
+  console.error('Usage: npm-assets <dest>');
+  process.exit(1);
 }
 
-assets(
-    process.cwd(),
-    process.argv[2],
-    done);
-
-function done(err) {
-    if (err) {
-        console.error('Error occurred while copying assets:');
-        console.error(err.toString());
-        process.exit(1);
-    }
-
-    process.exit(0);
-}
+require('../')(process.cwd(), process.argv[2], function done(err) {
+  if (err) {
+      console.error('Error occurred while copying assets:');
+      console.error(err.toString());
+      process.exit(1);
+  }
+  process.exit(0);
+});

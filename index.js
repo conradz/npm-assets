@@ -2,7 +2,6 @@ var fs = require('fs'),
     path = require('path'),
     findModules = require('find-modules'),
     async = require('async'),
-    unique = require('mout/array/unique'),
     mkdirp = require('mkdirp');
 
 module.exports = copyAssets;
@@ -21,6 +20,13 @@ function copyAssets(root, dest, callback) {
         assets.forEach(function(asset) {
             asset.dest = path.join(dest, asset.name);
         });
+        assets = assets.filter(function(asset, i, total) {
+          for (var n = 0; n < total.length; n+=1) {
+            if(total[n].dest === asset.dest) {
+              return n === i;
+            }
+          }
+        });
         createDirs(assets, created);
     }
 
@@ -34,8 +40,9 @@ function copyAssets(root, dest, callback) {
 }
 
 function createDirs(assets, callback) {
-    var dirs = assets.map(function(a) { return path.dirname(a.dest); });
-    dirs = unique(dirs);
+    var dirs = assets
+        .map(function(a) { return path.dirname(a.dest); })
+        .filter(function (value, i, total) { return total.indexOf(value) === i; });
 
     async.forEach(dirs, mkdirp, callback);
 }
