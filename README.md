@@ -1,9 +1,13 @@
 # npm-assets
 
-[![NPM](https://nodei.co/npm/npm-assets.png?compact=true)](https://nodei.co/npm/npm-assets/)
 
-[![Build Status](https://drone.io/github.com/conradz/npm-assets/status.png)](https://drone.io/github.com/conradz/npm-assets/latest)
-[![Dependency Status](https://david-dm.org/conradz/npm-assets.png)](https://david-dm.org/conradz/npm-assets)
+[![license:mit](https://img.shields.io/badge/license-bsd-green.svg?style=flat-square)](#license)<br>
+[![tag:?](https://img.shields.io/github/tag/conradz/npm-assets.svg?style=flat-square)](https://github.com/conradz/npm-assets/releases)
+[![build:?](https://img.shields.io/travis/conradz/npm-assets/master.svg?style=flat-square)](https://travis-ci.org/conradz/npm-assets)
+[![coverage:?](https://img.shields.io/coveralls/conradz/npm-assets/master.svg?style=flat-square)](https://coveralls.io/r/conradz/npm-assets)<br>
+[![npm:?](https://img.shields.io/npm/v/npm-assets.svg?style=flat-square)](https://www.npmjs.com/packages/npm-assets)
+[![dependencies:?](https://img.shields.io/npm/dm/npm-assets.svg?style=flat-square)](https://www.npmjs.com/packages/npm-assets)
+[![devDependencies:?](https://img.shields.io/david/conradz/npm-assets.svg?style=flat-square)](https://david-dm.org/conradz/npm-assets)
 
 Use static files from NPM packages.
 
