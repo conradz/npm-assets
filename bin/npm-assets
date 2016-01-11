@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+'use strict';
+/* eslint-disable no-console, no-process-exit */
 if (process.argv.length !== 3) {
   console.error('Usage: npm-assets <dest>');
   process.exit(1);
@@ -6,9 +8,9 @@ if (process.argv.length !== 3) {
 
 require('../')(process.cwd(), process.argv[2], function done(err) {
   if (err) {
-      console.error('Error occurred while copying assets:');
-      console.error(err.toString());
-      process.exit(1);
+    console.error('Error occurred while copying assets:');
+    console.error(err.toString());
+    process.exit(1);
   }
   process.exit(0);
 });

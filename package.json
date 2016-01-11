@@ -25,6 +25,7 @@
     "url": "git+ssh://github.com/conradz/npm-assets.git"
   },
   "scripts": {
+    "pretest": "eslint .",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "tap test.js"
   },
@@ -33,17 +34,44 @@
       "commit-msg": "validate-commit-msg"
     }
   },
+  "eslintConfig": {
+    "extends": [
+      "strict/es5"
+    ],
+    "rules": {
+      "no-magic-numbers": 0,
+      "id-length": [
+        2,
+        {
+          "min": 2,
+          "max": 20,
+          "exceptions": [
+            "i",
+            "n",
+            "t"
+          ]
+        }
+      ],
+      "no-use-before-define": 0
+    }
+  },
   "dependencies": {
     "async": "^1.5.1",
     "find-modules": "~0.2.0",
     "mkdirp": "^0.5.1"
   },
   "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-strict": "^7.0.4",
+    "eslint-plugin-filenames": "^0.2.0",
     "ghooks": "^1.0.1",
     "rimraf": "^2.5.0",
     "semantic-release": "^4.3.5",
     "tap": "^5.0.0",
     "travis-after-all": "^1.4.4",
     "validate-commit-msg": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=0.12"
   }
 }
