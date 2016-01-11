@@ -9,7 +9,7 @@ test('list test assets', function(t) {
 
     function found(err, assets) {
         t.error(err, 'successful');
-        t.equal(assets.length, 2);
+        t.equal(assets.length, 3);
 
         t.equal(assets[0].name, 'foo/bar.txt');
         t.equal(
@@ -17,9 +17,15 @@ test('list test assets', function(t) {
             path.normalize(path.join(
                 __dirname, 'test/node_modules/hello/foo/bar.txt')));
 
-        t.equal(assets[1].name, 'test.txt');
+        t.equal(assets[1].name, 'foo/bar.txt');
         t.equal(
             path.normalize(assets[1].path),
+            path.normalize(path.join(
+                __dirname, 'test/node_modules/hello-again/foo/bar.txt')));
+
+        t.equal(assets[2].name, 'test.txt');
+        t.equal(
+            path.normalize(assets[2].path),
             path.normalize(path.join(
                 __dirname, 'test/test.txt')));
 
