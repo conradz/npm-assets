@@ -58,6 +58,7 @@
   "dependencies": {
     "async": "^1.5.1",
     "find-modules": "~0.2.0",
+	"graceful-fs": "^4.1.9",
     "mkdirp": "^0.5.1"
   },
   "devDependencies": {
