@@ -58,6 +58,7 @@
   "dependencies": {
     "async": "^1.5.1",
     "find-modules": "~0.2.0",
+	"graceful-fs": "^4.1.9",
     "mkdirp": "^0.5.1"
   },
   "devDependencies": {
@@ -65,7 +66,6 @@
     "eslint-config-strict": "^7.0.4",
     "eslint-plugin-filenames": "^0.2.0",
     "ghooks": "^1.0.1",
-    "graceful-fs": "^4.1.9",
     "rimraf": "^2.5.0",
     "semantic-release": "^4.3.5",
     "tap": "^5.0.0",
